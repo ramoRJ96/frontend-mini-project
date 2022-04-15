@@ -1,0 +1,67 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+.anim-box {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #333;
+    margin: 100px auto;
+    position: relative;
+}
+
+.anim-interieur {
+    width:  100px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.rect {
+    background: #333;
+    display: inline-block;
+    height: 60px;
+    width: 6px;
+    margin: 0px 1px;
+    animation: etire 1200ms infinite ease-in-out;
+}
+
+@keyframes etire {
+    0% {
+        transform: scaleY(0.4);
+    }
+    20% {
+        transform: scaleY(1);
+    }
+    40% {
+        transform: scaleY(0.4);
+    }
+    100% {
+        transform: scaleY(0.4);
+    }
+}
+
+.rect2 {
+    animation-delay: -1100ms;
+}
+
+.rect3 {
+    animation-delay: -1000ms;
+}
+
+.rect4 {
+    animation-delay: -900ms;
+}
+
+.rect5 {
+    animation-delay: -800ms;
+}

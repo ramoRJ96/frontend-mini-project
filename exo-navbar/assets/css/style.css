@@ -1,0 +1,51 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #333;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+nav {
+    height: 70px;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+nav > ul {
+    width: 100%;
+    text-align: center;
+}
+
+nav > ul > li {
+    display: inline-block;
+    line-height: 70px;
+}
+
+nav > ul > li:not(:last-child) {
+    margin-right: 20px;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: #333;
+}
+
+.links::after {
+    content: '';
+    display: block;
+    width: 0;
+    margin: -22px auto 0 auto;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #aaa;
+    transition: width 200ms ease-out;
+}
+
+.links:hover::after {
+    width: 100%;
+}
